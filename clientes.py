@@ -5,7 +5,7 @@ from verificadores import Autenticador
 app = Flask(__name__)
 
 # Datos para la conexión a MongoDB
-url_conexion = "mongodb+srv://braian74:#Braian0410@sdgoodpractices.ro7urth.mongodb.net/"
+url_conexion = "mongodb+srv://braian74:#Braian0410@sdgoodpractices.ro7urth.mongodb.net/?retryWrites=true&w=majority&appName=SDGoodPractices"
 base_de_datos = "Order"
 coleccion = "Clientes"
 
