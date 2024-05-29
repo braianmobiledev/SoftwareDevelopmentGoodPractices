@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: validatorGP
+Version: 0.1
+Summary: A python package for validate user before use conection to database
+Home-page: https://github.com/braianmobiledev/SoftwareDevelopmentGoodPractices
+Author: Braian Peña
+Author-email: braian7410@gmail.com
+License: Apache License

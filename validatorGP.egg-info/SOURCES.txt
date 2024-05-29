@@ -1,0 +1,8 @@
+setup.py
+validatorGP.egg-info/PKG-INFO
+validatorGP.egg-info/SOURCES.txt
+validatorGP.egg-info/dependency_links.txt
+validatorGP.egg-info/not-zip-safe
+validatorGP.egg-info/top_level.txt
+validators/__init__.py
+validators/verificadores.py
