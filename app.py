@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from verificadores import Autenticador, Validador, Filtro_IP, Cache
+from validators.verificadores import Autenticador, Validador, Filtro_IP, Cache
 from flask_cors import CORS
 from clientes import app as app_clientes
 from bson import ObjectId
