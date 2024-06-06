@@ -11,6 +11,11 @@ provider "google" {
   project = "devopsterraform-425615"
 }
 
+variable "google_credentials" {
+  description = "Google Cloud credentials in JSON format"
+  type        = string
+}
+
 # Habilita la API de Cloud Run
 resource "google_project_service" "run_api" {
   service = "run.googleapis.com"
