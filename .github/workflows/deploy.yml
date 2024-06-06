@@ -1,0 +1,30 @@
+name: Terraform
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.0.11
+
+    - name: Configure GCP credentials
+      run: echo "${{ secrets.GCP_CREDENTIALS }}" > ${{ runner.temp }}/terraform-key.json
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Apply
+      env:
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+      run: terraform apply -auto-approve -var="google_credentials=${{ runner.temp }}/terraform-key.json"
