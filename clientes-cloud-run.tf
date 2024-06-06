@@ -25,7 +25,7 @@ resource "google_cloud_run_service_iam_member" "run_all_users" {
   member   = "allUsers"
 }
 
-# Crear el servicio de Cloud Run para la API de NestJS
+# Crear el servicio de Cloud Run para la API de Python
 resource "google_cloud_run_service" "run_service" {
   name     = "clientes-api"
   location = "us-central1"
