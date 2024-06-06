@@ -203,6 +203,10 @@ def crear_cliente():
         return jsonify({"mensaje": "Cliente creado con éxito", "cliente_id": str(cliente_id)})
     else:
         return jsonify({"mensaje": "No autorizado para crear clientes"})
+    
+@app.route('/', methods=['GET'])
+def main():
+    return jsonify({"mesage": "Welcome to sample API"})
 
 # Leer todos los clientes
 @app.route('/clientes', methods=['GET'])
