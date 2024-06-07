@@ -208,8 +208,6 @@ def crear_cliente():
 def main():
     return jsonify({"mesage": "Welcome to sample API"})
 
-
-
 # Leer todos los clientes
 @app.route('/clientes', methods=['GET'])
 def obtener_clientes():
